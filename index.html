@@ -3195,7 +3195,7 @@ div.tocify {
     max-width: unset;
 }
 </style>
-<p><em>Data compiled from source on 13 October 2021 (10:03).</em></p>
+<p><em>Data compiled from source on 13 October 2021 (10:09).</em></p>
 <div id="data-prep" class="section level1 tabset">
 <h1>Data prep</h1>
 <div id="r-setup" class="section level2">
@@ -4013,7 +4013,7 @@ ggplot(plot, aes(x = hwbOutcome_effect)) + geom_bar(aes(fill = hwbOutcome_type))
 </tr>
 </tbody>
 </table>
-<p>Citation count by use type for studies with <em>greater</em> than one use type:</p>
+<p>Citation count by use type for studies with <em>greater</em> than one use type excluding fisheries &amp; irrigation:</p>
 <table>
 <thead>
 <tr class="header">
@@ -4035,14 +4035,6 @@ ggplot(plot, aes(x = hwbOutcome_effect)) + geom_bar(aes(fill = hwbOutcome_type))
 <td align="right">12</td>
 </tr>
 <tr class="even">
-<td align="left">fisheries</td>
-<td align="right">13</td>
-</tr>
-<tr class="odd">
-<td align="left">irrigation</td>
-<td align="right">18</td>
-</tr>
-<tr class="even">
 <td align="left">livestock</td>
 <td align="right">3</td>
 </tr>
@@ -4053,6 +4045,36 @@ ggplot(plot, aes(x = hwbOutcome_effect)) + geom_bar(aes(fill = hwbOutcome_type))
 <tr class="even">
 <td align="left">recreation</td>
 <td align="right">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="action-type" class="section level3">
+<h3>Action type</h3>
+<p>Citation count by action type for studies with only one action type:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">action_type</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">fisheries_mgmt</td>
+<td align="right">21</td>
+</tr>
+<tr class="even">
+<td align="left">irrigation_mgmt</td>
+<td align="right">25</td>
+</tr>
+<tr class="odd">
+<td align="left">other_fw_species_mgmt</td>
+<td align="right">1</td>
+</tr>
+<tr class="even">
+<td align="left">terrestrial_mgmt</td>
+<td align="right">1</td>
 </tr>
 </tbody>
 </table>
@@ -4092,8 +4114,8 @@ ggplot(plot, aes(x = hwbOutcome_effect)) + geom_bar(aes(fill = hwbOutcome_type))
 <h2>Comparison of cross-tab plot styles</h2>
 <div id="sankey-diagram" class="section level3">
 <h3>Sankey diagram</h3>
-<p>Frequency of occurrence for each paired combination of FWE (left) and use type (right) <div id="htmlwidget-30126234993666dd542d" style="width:960px;height:480px;" class="sankeyNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-30126234993666dd542d">{"x":{"links":{"source":[0,0,0,0,1,1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,6,7,7,7,7,7,7,7,7,8,8,8,8],"target":[9,10,12,15,9,10,11,12,13,14,15,16,9,10,11,12,13,15,9,10,11,12,13,15,16,9,10,11,12,13,14,15,16,9,11,12,13,14,15,12,13,9,10,11,12,13,14,15,16,10,12,13,15],"value":[1,1,2,2,2,1,5,3,11,1,2,1,4,2,1,16,6,7,2,1,1,21,6,5,2,3,1,2,7,6,1,6,1,1,6,2,25,2,1,1,4,3,3,7,17,24,2,8,2,1,2,2,3]},"nodes":{"name":["brackish","groundwater_springs","lakes_marshes_seasonal","lakes_permanent","marshes_permanent","other_artificial","reservoirs","rivers_permanent","rivers_seasonal","aquaculture","cultural","domestic_water","fisheries","irrigation","livestock","other_fw_species","recreation"],"group":["brackish","groundwater_springs","lakes_marshes_seasonal","lakes_permanent","marshes_permanent","other_artificial","reservoirs","rivers_permanent","rivers_seasonal","aquaculture","cultural","domestic_water","fisheries","irrigation","livestock","other_fw_species","recreation"]},"options":{"NodeID":"name","NodeGroup":"name","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":12,"fontFamily":"Arial","nodeWidth":30,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":true}},"evals":[],"jsHooks":[]}</script></p>
+<p>Frequency of occurrence for each paired combination of FWE (left) and use type (right) <div id="htmlwidget-067c6a198ac2659ed39d" style="width:960px;height:480px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-067c6a198ac2659ed39d">{"x":{"links":{"source":[0,0,0,0,1,1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,5,5,5,5,5,5,6,6,7,7,7,7,7,7,7,7,8,8,8,8],"target":[9,10,12,15,9,10,11,12,13,14,15,16,9,10,11,12,13,15,9,10,11,12,13,15,16,9,10,11,12,13,14,15,16,9,11,12,13,14,15,12,13,9,10,11,12,13,14,15,16,10,12,13,15],"value":[1,1,2,2,2,1,5,3,11,1,2,1,4,2,1,16,6,7,2,1,1,21,6,5,2,3,1,2,7,6,1,6,1,1,6,2,25,2,1,1,4,3,3,7,17,24,2,8,2,1,2,2,3]},"nodes":{"name":["brackish","groundwater_springs","lakes_marshes_seasonal","lakes_permanent","marshes_permanent","other_artificial","reservoirs","rivers_permanent","rivers_seasonal","aquaculture","cultural","domestic_water","fisheries","irrigation","livestock","other_fw_species","recreation"],"group":["brackish","groundwater_springs","lakes_marshes_seasonal","lakes_permanent","marshes_permanent","other_artificial","reservoirs","rivers_permanent","rivers_seasonal","aquaculture","cultural","domestic_water","fisheries","irrigation","livestock","other_fw_species","recreation"]},"options":{"NodeID":"name","NodeGroup":"name","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":12,"fontFamily":"Arial","nodeWidth":30,"nodePadding":10,"units":"","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":32,"sinksRight":true}},"evals":[],"jsHooks":[]}</script></p>
 </div>
 <div id="heatmap" class="section level3">
 <h3>Heatmap</h3>
